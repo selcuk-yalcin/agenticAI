@@ -1,0 +1,73 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                  OVERALL SYSTEM ARCHITECTURE                       ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+                          ┌─────────┐
+                          │  USER   │
+                          └────┬────┘
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+        ▼                      ▼                      ▼
+╔═══════════════════════════════════════════════════════════════╗
+║                      CORE SYSTEM                               ║
+║                                                               ║
+║  ┌──────────────────────────────────────────────────────┐    ║
+║  │              BASE AGENT (Abstract)                    │    ║
+║  │  • Tool integration                                  │    ║
+║  │  • Message history                                   │    ║
+║  │  • LLM communication                                 │    ║
+║  └──────────────────────────────────────────────────────┘    ║
+║                                                               ║
+║  ┌──────────────────────────────────────────────────────┐    ║
+║  │              BASE TOOL (Abstract)                     │    ║
+║  │  • Execute method                                    │    ║
+║  │  • Tool definition                                   │    ║
+║  │  • Error handling                                    │    ║
+║  └──────────────────────────────────────────────────────┘    ║
+║                                                               ║
+║  ┌──────────────────────────────────────────────────────┐    ║
+║  │              LLM CLIENT                               │    ║
+║  │  • OpenAI Integration                                │    ║
+║  │  • Anthropic Integration                             │    ║
+║  │  • Model routing                                     │    ║
+║  └──────────────────────────────────────────────────────┘    ║
+║                                                               ║
+║  ┌──────────────────────────────────────────────────────┐    ║
+║  │          CONFIGURATION & UTILITIES                    │    ║
+║  │  • Environment management                            │    ║
+║  │  • Settings loader                                   │    ║
+║  │  • File utilities                                    │    ║
+║  └──────────────────────────────────────────────────────┘    ║
+╚═══════════════════════════════════════════════════════════════╝
+        │                      │                      │
+┌───────▼───────┐     ┌────────▼────────┐    ┌───────▼───────┐
+│   PROJECTS    │     │    PROJECTS     │    │   PROJECTS    │
+│               │     │                 │    │               │
+│ 1. Research   │     │ 4. Support      │    │ 7. Social     │
+│    3 Tools    │     │    Analysis     │    │    Platforms  │
+│               │     │                 │    │               │
+│ 2. Data Viz   │     │ 5. Analytics    │    │               │
+│    2 Tools    │     │    Methods      │    │               │
+│               │     │                 │    │               │
+│ 3. Content    │     │ 6. Email        │    │               │
+│    2 Tools    │     │    Campaigns    │    │               │
+└───────────────┘     └─────────────────┘    └───────────────┘
+
+╔═══════════════════════════════════════════════════════════════╗
+║                    WORKFLOW LAYER                              ║
+║                                                               ║
+║  Each project has specialized workflows:                      ║
+║  • Multi-step orchestration                                  ║
+║  • State management                                          ║
+║  • Error handling                                            ║
+║  • Progress tracking                                         ║
+╚═══════════════════════════════════════════════════════════════╝
+
+KEY COMPONENTS:
+  • 7 Specialized Agents
+  • 15+ Tools
+  • 50+ Workflow Methods
+  • 2 LLM Providers (OpenAI, Anthropic)
+  • Modular & Extensible Architecture

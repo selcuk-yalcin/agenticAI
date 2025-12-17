@@ -1,0 +1,60 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                    RESEARCH AGENT ARCHITECTURE                     ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+    ┌─────────┐
+    │  USER   │
+    │ (Query) │
+    └────┬────┘
+         │
+         ▼
+╔════════════════════════════════════════════════════════════╗
+║                    RESEARCH AGENT                           ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │        LLM ROUTER (GPT-4 / Claude)        │          ║
+║   └──────────┬──────────────────┬──────────────┘          ║
+║              │                  │                         ║
+║   ┌──────────▼──────────┐  ┌───▼───────────────┐         ║
+║   │  SYSTEM PROMPT:     │  │     MEMORY:       │         ║
+║   │  "Research Expert"  │  │  Conversation     │         ║
+║   │  Multi-source data  │  │  History Tracking │         ║
+║   └─────────────────────┘  └───────────────────┘         ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │              TOOLS (3)                      │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 1. TAVILY SEARCH                  │     │          ║
+║   │  │    • Web search                   │     │          ║
+║   │  │    • Current information          │     │          ║
+║   │  │    • News & articles              │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 2. WIKIPEDIA                      │     │          ║
+║   │  │    • Encyclopedia lookup          │     │          ║
+║   │  │    • Factual information          │     │          ║
+║   │  │    • Background context           │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 3. arXiv                          │     │          ║
+║   │  │    • Academic papers              │     │          ║
+║   │  │    • Scientific research          │     │          ║
+║   │  │    • Citations                    │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   └────────────────────────────────────────────┘          ║
+╚════════════════════════════════════════════════════════════╝
+         │
+         ▼
+    ┌─────────┐
+    │ RESULT  │
+    │(Report) │
+    └─────────┘
+
+WORKFLOW EXAMPLES:
+  • Comprehensive Research → Uses all 3 tools → Synthesizes findings
+  • Comparative Analysis → Multiple searches → Side-by-side comparison
+  • Trend Analysis → Historical + Current data → Future predictions

@@ -1,0 +1,73 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║              CONTENT CREATION AGENT ARCHITECTURE                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+    ┌─────────┐
+    │  USER   │
+    │ (Topic) │
+    └────┬────┘
+         │
+         ▼
+╔════════════════════════════════════════════════════════════╗
+║                CONTENT WRITER AGENT                         ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │        LLM ROUTER (GPT-4)                 │          ║
+║   └──────────┬──────────────────┬──────────────┘          ║
+║              │                  │                         ║
+║   ┌──────────▼──────────┐  ┌───▼───────────────┐         ║
+║   │  SYSTEM PROMPT:     │  │     MEMORY:       │         ║
+║   │  "Expert Content    │  │  Content Library  │         ║
+║   │   Writer"           │  │  Past Articles    │         ║
+║   │  SEO Specialist     │  │  Style Guide      │         ║
+║   └─────────────────────┘  └───────────────────┘         ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │              TOOLS (2)                      │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 1. KEYWORD RESEARCH TOOL          │     │          ║
+║   │  │    • SEO keyword discovery        │     │          ║
+║   │  │    • Search volume analysis       │     │          ║
+║   │  │    • Keyword difficulty           │     │          ║
+║   │  │    • Related terms                │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 2. SEO OPTIMIZER TOOL             │     │          ║
+║   │  │    • Content analysis             │     │          ║
+║   │  │    • Keyword density check        │     │          ║
+║   │  │    • Readability score            │     │          ║
+║   │  │    • Optimization suggestions     │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   └────────────────────────────────────────────┘          ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │         CONTENT TYPES (4)                   │          ║
+║   │                                             │          ║
+║   │  📝 BLOG POST                               │          ║
+║   │     800-1500 words, engaging, SEO          │          ║
+║   │                                             │          ║
+║   │  📰 ARTICLE                                 │          ║
+║   │     Professional, informative, in-depth    │          ║
+║   │                                             │          ║
+║   │  🎯 LANDING PAGE                            │          ║
+║   │     Conversion-focused, persuasive, CTA    │          ║
+║   │                                             │          ║
+║   │  💬 SOCIAL POST                             │          ║
+║   │     Short, engaging, shareable             │          ║
+║   └────────────────────────────────────────────┘          ║
+╚════════════════════════════════════════════════════════════╝
+         │
+         ▼
+    ┌─────────┐
+    │ CONTENT │
+    │   SEO   │
+    └─────────┘
+
+WORKFLOW EXAMPLES:
+  • Full Content Pipeline → Research → Outline → Write → Optimize
+  • Content Series → Multiple related posts
+  • Multi-Format → Same topic, different formats
+  • A/B Testing → Multiple headline variants

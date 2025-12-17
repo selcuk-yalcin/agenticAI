@@ -1,0 +1,72 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║              DATA VISUALIZATION AGENT ARCHITECTURE                 ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+    ┌─────────────┐
+    │    USER     │
+    │ (Data + Q)  │
+    └──────┬──────┘
+           │
+           ▼
+╔════════════════════════════════════════════════════════════╗
+║                    CHART AGENT                              ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │        LLM ROUTER (GPT-4)                 │          ║
+║   └──────────┬──────────────────┬──────────────┘          ║
+║              │                  │                         ║
+║   ┌──────────▼──────────┐  ┌───▼───────────────┐         ║
+║   │  SYSTEM PROMPT:     │  │     MEMORY:       │         ║
+║   │  "Data Analyst"     │  │  Chart History    │         ║
+║   │  Statistics Expert  │  │  Preferences      │         ║
+║   └─────────────────────┘  └───────────────────┘         ║
+║                                                            ║
+║   ┌────────────────────────────────────────────┐          ║
+║   │              TOOLS (2)                      │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 1. DATA ANALYSIS TOOL             │     │          ║
+║   │  │    • Statistical analysis         │     │          ║
+║   │  │    • Pattern detection            │     │          ║
+║   │  │    • Insights generation          │     │          ║
+║   │  │    • Trend identification         │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   │                                             │          ║
+║   │  ┌───────────────────────────────────┐     │          ║
+║   │  │ 2. CHART GENERATION TOOL          │     │          ║
+║   │  │                                   │     │          ║
+║   │  │    📊 LINE CHART                  │     │          ║
+║   │  │    • Time series                  │     │          ║
+║   │  │    • Trends over time             │     │          ║
+║   │  │                                   │     │          ║
+║   │  │    📊 BAR CHART                   │     │          ║
+║   │  │    • Comparisons                  │     │          ║
+║   │  │    • Categories                   │     │          ║
+║   │  │                                   │     │          ║
+║   │  │    📊 SCATTER PLOT                │     │          ║
+║   │  │    • Correlations                 │     │          ║
+║   │  │    • Relationships                │     │          ║
+║   │  │                                   │     │          ║
+║   │  │    📊 PIE CHART                   │     │          ║
+║   │  │    • Proportions                  │     │          ║
+║   │  │    • Percentages                  │     │          ║
+║   │  │                                   │     │          ║
+║   │  │    📊 HEATMAP                     │     │          ║
+║   │  │    • Correlations                 │     │          ║
+║   │  │    • Matrix data                  │     │          ║
+║   │  └───────────────────────────────────┘     │          ║
+║   └────────────────────────────────────────────┘          ║
+╚════════════════════════════════════════════════════════════╝
+           │
+           ▼
+    ┌─────────────┐
+    │   CHART     │
+    │ + Analysis  │
+    └─────────────┘
+
+WORKFLOW EXAMPLES:
+  • Analyze & Visualize → Auto-selects best chart type
+  • Multi-Chart Dashboard → Creates multiple visualizations
+  • Time Series Analysis → Trends + Forecasting
+  • Correlation Analysis → Heatmap + Insights

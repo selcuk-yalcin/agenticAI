@@ -1,0 +1,120 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║               INTEGRATED WORKFLOW EXAMPLE                          ║
+║           Research → Content → Social → Email                      ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+USER REQUEST: "Create content marketing campaign about AI Trends"
+
+┌─────────────────────────────────────────────────────────────────┐
+│ STEP 1: RESEARCH WORKFLOW                                        │
+│ ┌──────────────────────────────────────────────────────────┐    │
+│ │ ResearchWorkflow.comprehensive_research()                 │    │
+│ │   Topic: "AI Trends 2024"                                │    │
+│ │   Depth: "medium"                                        │    │
+│ │                                                          │    │
+│ │   Tools Used:                                            │    │
+│ │   ✓ Tavily Search  → Current news & articles            │    │
+│ │   ✓ Wikipedia      → Background information             │    │
+│ │   ✓ arXiv          → Academic papers                    │    │
+│ │                                                          │    │
+│ │   Output:                                                │    │
+│ │   • Overview of AI trends                                │    │
+│ │   • Current developments                                 │    │
+│ │   • Expert opinions                                      │    │
+│ │   • Future predictions                                   │    │
+│ └──────────────────────────────────────────────────────────┘    │
+└───────────────────────┬─────────────────────────────────────────┘
+                        │ Research Results
+                        ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ STEP 2: CONTENT WORKFLOW                                         │
+│ ┌──────────────────────────────────────────────────────────┐    │
+│ │ ContentWorkflow.full_content_pipeline()                   │    │
+│ │   Topic: "AI Trends 2024"                                │    │
+│ │   Type: "blog_post"                                      │    │
+│ │   Context: Research findings                             │    │
+│ │                                                          │    │
+│ │   Steps:                                                 │    │
+│ │   1. Keyword Research   → SEO keywords identified       │    │
+│ │   2. Content Outline    → Structure created             │    │
+│ │   3. Draft Writing      → Blog post written             │    │
+│ │   4. SEO Optimization   → Keywords optimized            │    │
+│ │   5. Final Polish       → Ready to publish              │    │
+│ │                                                          │    │
+│ │   Output:                                                │    │
+│ │   • 1200-word blog post                                  │    │
+│ │   • SEO optimized                                        │    │
+│ │   • Engaging headlines                                   │    │
+│ │   • Clear call-to-action                                 │    │
+│ └──────────────────────────────────────────────────────────┘    │
+└───────────────────────┬─────────────────────────────────────────┘
+                        │ Blog Content
+                        ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ STEP 3: SOCIAL MEDIA WORKFLOW                                    │
+│ ┌──────────────────────────────────────────────────────────┐    │
+│ │ SocialMediaWorkflow.content_repurposing_workflow()        │    │
+│ │   Source: Blog post                                      │    │
+│ │   Platforms: Instagram, Twitter, LinkedIn                │    │
+│ │                                                          │    │
+│ │   Adaptation:                                            │    │
+│ │   Instagram:                                             │    │
+│ │   • Carousel post with key points                        │    │
+│ │   • Engaging caption (2200 chars)                        │    │
+│ │   • 20 relevant hashtags                                 │    │
+│ │   • Visual-first approach                                │    │
+│ │                                                          │    │
+│ │   Twitter/X:                                             │    │
+│ │   • Thread with 5 tweets                                 │    │
+│ │   • Hook tweet with question                             │    │
+│ │   • Key insights in thread                               │    │
+│ │   • Link to blog in final tweet                          │    │
+│ │                                                          │    │
+│ │   LinkedIn:                                              │    │
+│ │   • Professional post (3000 chars)                       │    │
+│ │   • Industry insights                                    │    │
+│ │   • Thought leadership tone                              │    │
+│ │   • Call for discussion                                  │    │
+│ └──────────────────────────────────────────────────────────┘    │
+└───────────────────────┬─────────────────────────────────────────┘
+                        │ Social Posts
+                        ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ STEP 4: EMAIL WORKFLOW                                           │
+│ ┌──────────────────────────────────────────────────────────┐    │
+│ │ EmailWorkflow.newsletter_workflow()                       │    │
+│ │   Content: Blog + Social posts                           │    │
+│ │   Frequency: Weekly                                      │    │
+│ │                                                          │    │
+│ │   Newsletter Sections:                                   │    │
+│ │   1. Introduction   → Hook readers                       │    │
+│ │   2. Main Article   → Link to blog                       │    │
+│ │   3. Key Takeaways  → Bullet points                      │    │
+│ │   4. Social Links   → Follow us                          │    │
+│ │   5. CTA            → Read more / Share                  │    │
+│ │                                                          │    │
+│ │   Segmentation:                                          │    │
+│ │   • VIP customers    → Early access                      │    │
+│ │   • Regular readers  → Standard newsletter               │    │
+│ │   • New subscribers  → Welcome series                    │    │
+│ │                                                          │    │
+│ │   A/B Testing:                                           │    │
+│ │   • Subject line variants                                │    │
+│ │   • Send time optimization                               │    │
+│ │   • CTA button text                                      │    │
+│ └──────────────────────────────────────────────────────────┘    │
+└───────────────────────┬─────────────────────────────────────────┘
+                        │
+                        ▼
+╔═══════════════════════════════════════════════════════════════╗
+║                   CAMPAIGN COMPLETE!                           ║
+║                                                               ║
+║  ✓ Research conducted (3 sources)                            ║
+║  ✓ Blog post created (1200 words, SEO optimized)             ║
+║  ✓ Social posts for 3 platforms                              ║
+║  ✓ Newsletter sent to 3 segments                             ║
+║                                                               ║
+║  Total Time: ~30 minutes                                      ║
+║  Manual Effort: Minimal (review & approve)                    ║
+╚═══════════════════════════════════════════════════════════════╝

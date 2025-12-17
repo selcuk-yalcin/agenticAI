@@ -1,0 +1,89 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                    WORKFLOW ARCHITECTURE                           ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+┌─────────┐
+│  USER   │ "Create comprehensive content about AI"
+└────┬────┘
+     │
+     ▼
+╔════════════════════════════════════════════════════════════╗
+║                   WORKFLOW LAYER                            ║
+║                                                            ║
+║  ┌──────────────────┐  ┌──────────────────┐              ║
+║  │  RESEARCH        │  │  CONTENT         │              ║
+║  │  WORKFLOWS       │  │  WORKFLOWS       │              ║
+║  │                  │  │                  │              ║
+║  │ • Comprehensive  │  │ • Full Pipeline  │              ║
+║  │ • Comparative    │  │ • Series         │              ║
+║  │ • Trends         │  │ • A/B Testing    │              ║
+║  │ • Synthesis      │  │ • Repurposing    │              ║
+║  └──────────────────┘  └──────────────────┘              ║
+║                                                            ║
+║  ┌──────────────────┐  ┌──────────────────┐              ║
+║  │  SUPPORT         │  │  ANALYTICS       │              ║
+║  │  WORKFLOWS       │  │  WORKFLOWS       │              ║
+║  │                  │  │                  │              ║
+║  │ • Ticket         │  │ • Business       │              ║
+║  │   Lifecycle      │  │   Analysis       │              ║
+║  │ • Batch Process  │  │ • Optimization   │              ║
+║  │ • Routing        │  │ • Forecasting    │              ║
+║  └──────────────────┘  └──────────────────┘              ║
+║                                                            ║
+║  ┌──────────────────┐  ┌──────────────────┐              ║
+║  │  EMAIL           │  │  SOCIAL MEDIA    │              ║
+║  │  WORKFLOWS       │  │  WORKFLOWS       │              ║
+║  │                  │  │                  │              ║
+║  │ • Campaigns      │  │ • Campaigns      │              ║
+║  │ • Drip Sequence  │  │ • Viral Content  │              ║
+║  │ • Newsletter     │  │ • Influencer     │              ║
+║  │ • Re-engagement  │  │ • Performance    │              ║
+║  └──────────────────┘  └──────────────────┘              ║
+╚════════════════════════════════════════════════════════════╝
+     │
+     ▼
+╔════════════════════════════════════════════════════════════╗
+║                     AGENT LAYER                             ║
+║      7 Specialized Agents (Inherit from BaseAgent)        ║
+╚════════════════════════════════════════════════════════════╝
+     │
+     ▼
+╔════════════════════════════════════════════════════════════╗
+║                     TOOL LAYER                              ║
+║      15+ Specialized Tools (Inherit from BaseTool)        ║
+╚════════════════════════════════════════════════════════════╝
+     │
+     ▼
+╔════════════════════════════════════════════════════════════╗
+║                     LLM LAYER                               ║
+║              GPT-4 / Claude / Other Models                 ║
+╚════════════════════════════════════════════════════════════╝
+     │
+     ▼
+┌─────────┐
+│ RESULT  │
+│  USER   │
+└─────────┘
+
+INTEGRATED WORKFLOW EXAMPLE:
+
+Step 1: RESEARCH         Step 2: CONTENT         Step 3: SOCIAL
+┌──────────────┐        ┌──────────────┐        ┌──────────────┐
+│ Research AI  │   →    │ Create Blog  │   →    │ Multi-       │
+│ • Web Search │        │ • Write Post │        │  Platform    │
+│ • Wikipedia  │        │ • SEO Optim  │        │  Posts       │
+│ • Papers     │        │ • Keywords   │        │ • Instagram  │
+└──────────────┘        └──────────────┘        │ • Twitter    │
+                                                 │ • LinkedIn   │
+     ↓                       ↓                   └──────────────┘
+Research Data          Blog Content                   ↓
+                                                 Social Posts
+                                                       ↓
+Step 4: EMAIL                                    Complete!
+┌──────────────┐
+│ Newsletter   │
+│ • Segment    │
+│ • Campaign   │
+│ • Schedule   │
+└──────────────┘
