@@ -32,6 +32,54 @@ Always be polite, clear, and solution-focused. If you don't know the answer, be 
         )
         self.enable_sentiment_analysis = enable_sentiment_analysis
 
+    def run(
+        self,
+        query: str,
+        category: str = "general",
+        tone: str = "helpful",
+        **kwargs
+    ) -> str:
+        """
+        Process a customer support query.
+        
+        Args:
+            query: Customer question or issue
+            category: Type of support (technical, billing, product, troubleshooting)
+            tone: Response tone (helpful, empathetic, patient, informative)
+            **kwargs: Additional parameters
+            
+        Returns:
+            Support response
+        """
+        # Build context-aware prompt
+        prompt = f"""Customer Support Query:
+{query}
+
+Category: {category}
+Required Tone: {tone}
+
+Provide a clear, helpful response that:
+1. Acknowledges the customer's concern
+2. Provides a solution or next steps
+3. Maintains a {tone} tone
+4. Offers additional help if needed"""
+
+        # Add category-specific guidance
+        if category == "technical":
+            prompt += "\n\nProvide step-by-step troubleshooting instructions."
+        elif category == "billing":
+            prompt += "\n\nBe empathetic and clear about billing policies."
+        elif category == "product":
+            prompt += "\n\nProvide detailed product information and benefits."
+        elif category == "troubleshooting":
+            if kwargs.get("include_steps"):
+                prompt += "\n\nProvide numbered step-by-step instructions."
+        
+        # Use parent class's _execute_with_tools for LLM call
+        response, _ = self._execute_with_tools(prompt)
+        
+        return response
+
     def handle_inquiry(
         self,
         customer_message: str,

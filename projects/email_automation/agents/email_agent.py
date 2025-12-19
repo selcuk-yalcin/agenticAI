@@ -34,6 +34,19 @@ Create emails that are engaging, clear, and drive action. Follow email marketing
         )
         self.enable_personalization = enable_personalization
 
+    def run(self, prompt: str) -> str:
+        """
+        Run the email agent with a prompt.
+        
+        Args:
+            prompt: The prompt for email generation
+            
+        Returns:
+            Generated email content
+        """
+        response, _ = self._execute_with_tools(prompt)
+        return response
+
     def compose_email(
         self,
         email_type: str = "marketing",
